@@ -1,0 +1,11 @@
+
+# Virtual Environment
+env/
+web/dist/
+web/node_modules/
+web/.env
+web/package-lock.json
+
+
+#idea
+.idea
