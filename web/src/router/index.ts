@@ -12,12 +12,6 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     // the 404 route, when none of the above matches
-    path: "/about",
-    name: "about",
-    component: () => import("@/components/navbar/About.vue"),
-  },
-  {
-    // the 404 route, when none of the above matches
     path: "/404",
     name: "404",
     component: () => import("@/views/crafted/authentication/Error404.vue"),
