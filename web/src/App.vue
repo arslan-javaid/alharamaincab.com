@@ -1,4 +1,5 @@
 <template>
+  <navbar></navbar>
   <router-view />
 </template>
 
@@ -34,9 +35,10 @@
 import { defineComponent, onMounted } from "vue";
 import { useStore } from "vuex";
 import { Mutations } from "@/store/enums/StoreEnums";
-
+import Navbar from "@/components/navbar/Header.vue";
 export default defineComponent({
   name: "app",
+  components: { Navbar },
   setup() {
     const store = useStore();
 
