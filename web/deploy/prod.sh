@@ -19,13 +19,13 @@ npm run build
 
 # AWS S3 code deploy
 echo "Removing files from s3 bucket"
-aws s3 rm --recursive s3://alharamaincab.com/ --profile wisemarket
+aws s3 rm --recursive s3://alharamaincab.com/ --profile alharamaincab
 
 echo "Upload code to s3 bucket"
-aws s3 sync "dist/" s3://alharamaincab.com --delete --cache-control max-age=31536000 --profile wisemarket
+aws s3 sync "dist/" s3://alharamaincab.com --delete --cache-control max-age=31536000 --profile alharamaincab
 
 echo "Invalidate cloud-front cache on aws"
-aws cloudfront create-invalidation --profile wisemarket --distribution-id=E8EZD3KVBD5U0 --paths /
-aws cloudfront create-invalidation --profile wisemarket --distribution-id=E8EZD3KVBD5U0 --paths /*
+aws cloudfront create-invalidation --profile alharamaincab --distribution-id=EPPEI0ZS9TTWB --paths /
+aws cloudfront create-invalidation --profile alharamaincab --distribution-id=EPPEI0ZS9TTWB --paths /*
 
 echo "Done!!! ${timestamp}"
